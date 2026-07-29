@@ -4,7 +4,7 @@ import { useAuth } from '@/lib/auth';
 import { NotificationHost, toast } from '@/components/Notifications';
 import {
   LayoutDashboard, MessageSquareWarning, Landmark, Globe, ScanText,
-  QrCode, History, Flag, LogOut, Menu, X, ShieldCheck, Bell, ChevronRight,
+  QrCode, History, Flag, LogOut, Menu, X, ShieldCheck, Bell, ChevronRight, HeartHandshake,
 } from 'lucide-react';
 
 const NAV = [
@@ -14,6 +14,7 @@ const NAV = [
   { to: '/app/check-website', label: 'Check Website', icon: Globe, desc: 'URL & phishing detection' },
   { to: '/app/scan-ocr', label: 'OCR Scanner', icon: ScanText, desc: 'Analyse ad images / PDFs' },
   { to: '/app/scan-qr', label: 'Scan QR Code', icon: QrCode, desc: 'Decode & verify QR codes' },
+  { to: '/app/schemes', label: 'Govt Schemes', icon: HeartHandshake, desc: 'Browse genuine govt schemes' },
   { to: '/app/history', label: 'History', icon: History, desc: 'Past scans & results' },
   { to: '/app/report', label: 'Report Scam', icon: Flag, desc: 'Submit a scam report' },
 ];

@@ -11,6 +11,7 @@ import { VerifyGovernmentPage } from '@/pages/VerifyGovernmentPage';
 import { CheckWebsitePage } from '@/pages/CheckWebsitePage';
 import { ScanOcrPage } from '@/pages/ScanOcrPage';
 import { ScanQrPage } from '@/pages/ScanQrPage';
+import { SchemesPage } from '@/pages/SchemesPage';
 import { HistoryPage } from '@/pages/HistoryPage';
 import { ReportScamPage } from '@/pages/ReportScamPage';
 import { ShieldCheck } from 'lucide-react';
@@ -60,6 +61,7 @@ export default function App() {
             <Route path="check-website" element={<CheckWebsitePage />} />
             <Route path="scan-ocr" element={<ScanOcrPage />} />
             <Route path="scan-qr" element={<ScanQrPage />} />
+            <Route path="schemes" element={<SchemesPage />} />
             <Route path="history" element={<HistoryPage />} />
             <Route path="report" element={<ReportScamPage />} />
           </Route>

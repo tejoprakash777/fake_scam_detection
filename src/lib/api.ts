@@ -1,5 +1,5 @@
 import { supabase } from './supabase';
-import type { AnalysisResult, ScanType, Verdict, RiskLevel, AnalysisReason } from './types';
+import type { AnalysisResult, ScanType, Verdict, RiskLevel, AnalysisReason, GovSchemeRow } from './types';
 import { analyzeMessage, analyzeGovernment, analyzeWebsite, analyzeQr } from './detection';
 
 const FUNCTION_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/analyze-scam`;
@@ -86,6 +86,17 @@ export async function analyzeGovernmentApi(input: {
     recruitmentTitle: input.recruitmentTitle,
     records,
   });
+}
+
+/* ---- government schemes directory ---- */
+export async function fetchSchemes(): Promise<GovSchemeRow[]> {
+  const { data, error } = await supabase
+    .from('gov_schemes')
+    .select('id,name,ministry,category,eligibility,benefits,official_url,is_free,verified')
+    .order('category', { ascending: true })
+    .order('name', { ascending: true });
+  if (error) throw error;
+  return (data ?? []) as unknown as GovSchemeRow[];
 }
 
 /* ---- scan history persistence ---- */

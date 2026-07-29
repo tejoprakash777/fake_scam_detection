@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
   MessageSquareWarning, Landmark, Globe, ScanText, QrCode, History,
-  Flag, ShieldCheck, ArrowRight, TrendingUp, AlertTriangle, Activity,
+  Flag, ShieldCheck, ArrowRight, TrendingUp, AlertTriangle, Activity, HeartHandshake,
 } from 'lucide-react';
 import { useAuth } from '@/lib/auth';
 import { fetchHistory } from '@/lib/api';
@@ -14,6 +14,7 @@ const QUICK = [
   { to: '/app/check-website', label: 'Check Website', icon: Globe, tint: 'bg-success-50 text-success-600', desc: 'Analyse a recruitment URL' },
   { to: '/app/scan-ocr', label: 'OCR Scanner', icon: ScanText, tint: 'bg-warning-50 text-warning-600', desc: 'Upload an ad image or PDF' },
   { to: '/app/scan-qr', label: 'Scan QR Code', icon: QrCode, tint: 'bg-primary-50 text-accent-600', desc: 'Decode & verify a QR code' },
+  { to: '/app/schemes', label: 'Govt Schemes', icon: HeartHandshake, tint: 'bg-accent-50 text-primary-600', desc: 'Browse genuine government schemes' },
   { to: '/app/report', label: 'Report Scam', icon: Flag, tint: 'bg-danger-50 text-danger-600', desc: 'Submit a scam you encountered' },
 ];
 

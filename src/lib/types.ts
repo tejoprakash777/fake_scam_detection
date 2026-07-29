@@ -62,3 +62,15 @@ export interface BlacklistRow {
   reason: string;
   added_at: string;
 }
+
+export interface GovSchemeRow {
+  id: string;
+  name: string;
+  ministry: string;
+  category: 'Employment' | 'Welfare' | 'Skill' | 'Finance' | 'Agriculture';
+  eligibility: string;
+  benefits: string;
+  official_url: string;
+  is_free: boolean;
+  verified: boolean;
+}
